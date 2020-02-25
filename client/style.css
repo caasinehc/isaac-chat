@@ -1,3 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
+	background-color: #4080FF;
+}
+
+p {
+	background-color: #204080;
+	padding: 8px;
+	color: white;
+	font-size: 24px;
+}
+
+#msg {
+	background-color: #204080;
+	padding: 8px;
+	color: white;
 }
