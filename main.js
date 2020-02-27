@@ -2,7 +2,7 @@
  * Isaac chat
  * a1.0.0
  * By Isaac Chen
- * 2/24/2020
+ * 2/26/2020
  */
 
 // Set up the server
@@ -38,7 +38,9 @@ io.sockets.on("connection", function(socket) {
 		}
 		
 		newChatMsg(username, msg);
-	})
+	});
+	// Get the socket's information
+	socket.emit("getInfo");
 });
 
 // Client communication
@@ -48,12 +50,5 @@ function newChatMsg(username, msg) {
 	io.sockets.emit("chatMsg", {
 		username: username,
 		msg: msg
-	});
-}
-function sendRawMsg(text) {
-	console.log(text);
-	
-	io.sockets.emit("rawMsg", {
-		text: text
 	});
 }
