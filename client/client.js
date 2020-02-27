@@ -5,7 +5,7 @@
 
 // Set up socket communication with the server
 // TODO Don't hardcode this
-const socket = io.connect("isaac-chat.herokuapp.com");
+const socket = io.connect("wss://isaac-chat.herokuapp.com/");
 socket.on("chatMsg", function(data) {
 	newChatMsg(data.msg, data.username);
 });
