@@ -6,7 +6,7 @@
 // Set up socket communication with the server
 // TODO Don't hardcode this
 // const socket = io.connect(location.origin.replace(/^http/, 'ws'));
-const socket = io.connect(prompt("Please enter the URL"));
+const socket = io.connect(window.location.hostname);
 socket.on("chatMsg", function(data) {
 	newChatMsg(data.msg, data.username);
 });
